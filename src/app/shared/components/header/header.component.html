@@ -1,0 +1,21 @@
+<header>
+  <div class="brand">
+    <img width="150" src="https://www.brandbucket.com/sites/default/files/logo_uploads/412494/large_propeta.png" alt="propeta">
+    <button class="menu_button" (click)="onClick()">
+      <div class="menu_button-icon"></div>
+    </button>
+  </div>
+  <div class="menu" [class.d-block]="isOpen">
+    <ul class="menu_items">
+      <li class="menu_option">
+        <a href="#">HOME</a>
+      </li>
+      <li class="menu_option">
+        <a href="#">BLOG</a>
+      </li>
+      <li class="menu_option">
+        <a href="#">CONTACT</a>
+      </li>
+    </ul>
+  </div>
+</header>
