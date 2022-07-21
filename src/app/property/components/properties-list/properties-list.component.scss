@@ -1,0 +1,84 @@
+@import '../../../../sass/variables.scss';
+
+.list-properties {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  justify-items: center;
+}
+.list-properties_item {
+  width: 100%;
+}
+
+
+
+@media screen and(max-width:1024px){
+  .list-properties {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and(max-width:764px){
+  .list-properties {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+// properties
+
+
+
+.properties {
+  display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 20px auto;
+
+    &>h2{
+      text-align: center;
+      color: $dymgray-color;
+    }
+}
+
+
+
+@media screen and(max-width:1024px){
+  .properties {
+    padding: 0 16px;
+  }
+}
+
+//
+.overlay-conatainer{
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  bottom: 0;
+}
+
+
+.overlay-wrapper{
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  display: flex;
+  position: absolute;
+  z-index: 1000;
+  transition: all ease-out .5s;
+
+}
+
+.show {
+  display: block;
+  animation: fadeIn 1s;
+  @keyframes fadeIn {
+    from {display: none;}
+    to {display: block;}
+  }
+}
+

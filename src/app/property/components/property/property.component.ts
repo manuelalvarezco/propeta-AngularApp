@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Product } from '../shared/models/product.model';
-import { StoreService } from '../services/store.service';
+import { Product } from '../../../shared/models/product.model';
+import { StoreService } from '../../../services/store.service';
 
 @Component({
   selector: 'app-property',
@@ -22,7 +22,6 @@ export class PropertyComponent {
   constructor(private storeService: StoreService) { }
 
   addToCart(product: Product){
-    console.log('Agregando...');
     this.storeService.addProduct(product);
   }
 

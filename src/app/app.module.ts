@@ -1,25 +1,19 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LayoutComponent } from './layout/layout.component';
 import { SharedModule } from './shared/shared.module';
-import { PropertiesListComponent } from './properties-list/properties-list.component';
-import { PropertyComponent } from './property/property.component';
 @NgModule({
   declarations: [
     AppComponent,
-    PropertiesListComponent,
-    PropertyComponent
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule,
-    FormsModule,
-    HttpClientModule
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,22 @@
+<app-hero></app-hero>
+<div class="properties">
+  <h2>Top Selling</h2>
+  <div class="list-properties">
+    <div class="list-properties_item" *ngFor="let product of products | slice:0:5">
+      <app-property [product]="product"></app-property>
+    </div>
+  </div>
+</div>
+<div class="properties">
+  <h2>Latest Projects</h2>
+  <div class="list-properties">
+    <div class="list-properties_item" *ngFor="let product of products | slice:0:5">
+      <app-property [product]="product"></app-property>
+    </div>
+  </div>
+</div>
+<div class="overlay-conatainer" [class.show]="isAdded">
+  <div class="overlay-wrapper">
+    <app-snackbar (aceptSnackbar)="quitSnackbar()" [textLabel]="'Added to cart'" [textButton]="'OK'" ></app-snackbar>
+  </div>
+</div>

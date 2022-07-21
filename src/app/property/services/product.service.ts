@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Product } from '../shared/models/product.model';
 import { HttpClient } from '@angular/common/http'
+import { Product } from 'src/app/shared/models/product.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PropertyService {
+export class ProductService {
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getProducts(){
     return this.http.get<Product[]>('https://fakestoreapi.com/products');

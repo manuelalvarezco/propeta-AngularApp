@@ -107,6 +107,14 @@ button {
     &:hover{
       background-color: $bg-color;
     }
+    &:focus{
+      animation: onFocus 1s;
+      @keyframes onFocus {
+        from {background-color: $primary-color;}
+        to {background-color: $bg-color}
+      }
+
+    }
   }
 
   &.button.icon span{

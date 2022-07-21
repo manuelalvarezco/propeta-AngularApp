@@ -1,0 +1,59 @@
+@import '../../../../sass/variables.scss';
+
+
+.hero {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-image: url(https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &>h1{
+    align-self: center;
+    color: $white-color;
+    z-index: 1;
+
+    &>span.orange-color{
+      color: $orange-color;
+    }
+  }
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: .6;
+  background-color: $black-color;
+}
+
+.form-group-inline {
+  position: absolute;
+  width: 60%;
+  bottom: 10%;
+  display: flex;
+  padding: 15px;
+  background-color: $white-color;
+  margin: 20px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .form-group-inline {
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .hero  {
+    &> h1 {
+      align-self: flex-start;
+      margin: 90px 20px 0 20px;
+    }
+  }
+}

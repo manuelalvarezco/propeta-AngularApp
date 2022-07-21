@@ -3,7 +3,7 @@
     <img width="200" src="https://www.brandbucket.com/sites/default/files/logo_uploads/396729/large_eclothing.png" alt="propeta">
     <div class="mobile-menu">
       <div class="mobile-menu cart">
-        <span>{{productsCount}}</span>
+        <span class="productsCount" *ngIf="productsCount > 0">{{productsCount}}</span>
         <button class="button icon">
           <img width="20" src="../.././../../assets/icons/shopping_cart_black.SVG" alt="cart">
         </button>
@@ -18,7 +18,7 @@
     <ul class="menu_items">
       <li class="menu_option">
         <div class="desktop-menu cart">
-          <span>{{productsCount}}</span>
+          <span class="productsCount" *ngIf="productsCount > 0">{{productsCount}}</span>
           <button class="button icon">
             <img width="20" src="../.././../../assets/icons/shopping_cart_black.SVG" alt="cart">
           </button>

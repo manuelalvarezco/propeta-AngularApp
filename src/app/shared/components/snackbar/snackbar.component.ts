@@ -13,7 +13,6 @@ export class SnackbarComponent {
   constructor() { }
 
   quitSnackbar(){
-    console.log('log hijo');
     this.aceptSnackbar.emit();
   }
 
