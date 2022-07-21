@@ -1,16 +1,19 @@
 <div class="card">
   <div class="card_header">
       <div class="card_header-image">
-          <img class="rouded" [src]="property.image" [alt]="property.title">
+          <img class="rouded" [src]="product.image" [alt]="product.title">
       </div>
   </div>
   <div class="card_body">
-      <h2 class="card_body-title">{{ property.title }}</h2>
-      <p class="card_body-text">{{ property.description }}</p>
+      <h2 class="card_body-title">{{ product.title | slice:0:10 }}</h2>
+      <p class="card_body-text">{{ product.description | slice:0:100  }}...</p>
   </div>
   <div class="card-footer actions">
       <div class="card-footer-actions">
-          <button class="button text">View Details</button>
+        <h5>$ {{ product.price }}</h5>
+        <button class="button icon" (click)="addToCart(product)">
+          <img width="20" src="../.././assets/icons/add_shopping_cart_black.svg" alt="cart">
+        </button>
       </div>
       <div class="card-footer-icons">
       </div>

@@ -1,24 +1,30 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Product } from '../shared/models/product.model';
+import { StoreService } from '../services/store.service';
 
 @Component({
   selector: 'app-property',
   templateUrl: './property.component.html',
   styleUrls: ['./property.component.scss']
 })
-export class PropertyComponent implements OnInit {
+export class PropertyComponent {
 
-  @Input() property: Product = {
-    title: '',
-    image: '',
-    description: '',
+  @Input() product: Product = {
+    id : 1,
+    category : '',
+    image : '',
+    description : '',
+    price : 0,
+    rating : { rate: 0, count: 0},
+    title : '',
   }
 
-  constructor() { }
+  constructor(private storeService: StoreService) { }
 
-  ngOnInit(): void {
+  addToCart(product: Product){
+    console.log('Agregando...');
+    this.storeService.addProduct(product);
   }
-
 
 
 }

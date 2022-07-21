@@ -4,15 +4,20 @@
   grid-gap: 10px;
   justify-items: center;
 }
-
-@media screen and(max-width:764px){
-  .list-properties {
-    grid-template-columns: 1fr;
-  }
+.list-properties_item {
+  width: 100%;
 }
+
+
 
 @media screen and(max-width:1024px){
   .list-properties {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and(max-width:764px){
+  .list-properties {
+    grid-template-columns: 1fr;
   }
 }

@@ -7,6 +7,28 @@ header{
   justify-content: space-between;
   align-items: center;
 }
+.mobile-menu {
+  display: none;
+}
+
+.desktop-menu {
+  display: flex;
+    position: relative;
+    &>span{
+      position: absolute;
+      right: 0px;
+      top: -10px;
+      z-index: 2;
+      color: white;
+      width: 20px;
+      height: 20px;
+      background: #AB1E39;
+      border-radius: 50%;
+      text-align: center;
+      padding: 1px;
+      box-sizing: border-box;
+    }
+}
 
 .menu_button {
   display: none;
@@ -22,6 +44,7 @@ header{
 
 .menu_items {
   display: flex;
+  align-items: center;
 }
 .menu_option {
   margin: 0 10px;
@@ -64,13 +87,38 @@ header{
       }
     }
   }
+  .desktop-menu{
+    display: none;
+  }
+  .mobile-menu {
+    display: flex;
+    position: relative;
+    &>span{
+      position: absolute;
+    right: 0px;
+    top: -15px;
+    z-index: 2;
+    color: white;
+    font-size: 20px;
+    width: 25px;
+    height: 25px;
+    background: $primary-color;
+    border-radius: 50%;
+    text-align: center;
+    padding: 1px;
+    }
+  }
   .menu_button{
     display: block;
+    background-color: transparent;
   }
   .brand{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+  .menu_items li:nth-child(1){
+    display: none;
   }
 }

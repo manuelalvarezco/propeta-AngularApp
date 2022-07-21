@@ -1,5 +1,5 @@
 <div class="list-properties">
-  <div *ngFor="let property of properties">
-    <app-property [property]="property"></app-property>
+  <div class="list-properties_item" *ngFor="let product of products | slice:0:5">
+    <app-property [product]="product"></app-property>
   </div>
 </div>

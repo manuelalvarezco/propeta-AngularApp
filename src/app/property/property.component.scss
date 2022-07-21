@@ -1,5 +1,7 @@
+@import '../../sass/variables.scss';
+
 .card {
-  background-color: var(--white-color);
+  background-color: $white-color;
   width: 100%;
   border-radius: 5px;
   box-sizing: border-box;
@@ -27,15 +29,15 @@
   &_header-desc h2{
     margin: 0;
     font-size: 20px;
-    color: var(--dymgray-color);
+    color: $dymgray-color;
   }
 
   &_header-desc span{
-    color: var(--dark-gray-color);
+    color: $dark-gray-color;
   }
 
   &_header-avatar{
-    background-color: var(--dark-gray-color);
+    background-color: $dark-gray-color;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -48,13 +50,14 @@
 
   &_header-image{
     height: 194px;
-    background-color: var(--dark-gray-color);
+    background-color: $white-color;
+    padding: 10px 0;
   }
 
   &_header-image img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   &_header-image img.rouded{
@@ -62,7 +65,7 @@
   }
 
   &_fill {
-    background-color: var(--white-color);
+    background-color: $white-color;
     width: 344px;
     border-radius: 5px;
     box-sizing: border-box;
@@ -74,7 +77,8 @@
 
   &_body{
     padding: 10px 16px 0 16px;
-    color: var(--dymgray-color);
+    color: $dymgray-color;
+    height: 120px;
   }
 
   &_body-title {
@@ -89,7 +93,7 @@
     padding: 10px 16px;
   }
 
-  &-footer.actions{
+  &-footer-actions{
     display: flex;
     justify-content: space-between;
     align-items: center;
