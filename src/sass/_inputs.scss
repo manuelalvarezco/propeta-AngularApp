@@ -1,0 +1,40 @@
+input {
+  height: 2.5rem;
+  padding: 10px 16px;
+  box-sizing: border-box;
+  border: 1px solid $dark-gray-color;
+  border-radius: 5px;
+  color: $dymgray-color;
+  background-color: $gray-color;
+  &:focus{
+    outline: none;
+  }
+
+  &.outline.focus{
+        border: 2px solid $primary-color;
+    }
+    &.outline.error{
+        border: 2px solid $danger-color;
+    }
+    &.outline:disabled{
+        border: none;
+        background-color: $dark-gray-color;
+    }
+
+    /*Inputs fill*/
+    &.fill{
+        outline: none;
+        border: none;
+        border-radius: 5px 5px 0 0;
+        border-bottom: 1px solid $dark-gray-color;
+        background-color: var(--gray-color);
+    }
+
+    &.fill.focus{
+        border-bottom: 2px solid $primary-color;
+    }
+
+    &.fill:disabled{
+        background-color: $dark-gray-color;
+    }
+}

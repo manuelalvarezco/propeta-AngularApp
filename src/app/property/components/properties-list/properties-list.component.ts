@@ -19,7 +19,6 @@ export class PropertiesListComponent implements OnInit {
     this.getProducts();
     this.storeService.myCart$.subscribe(
       products => {
-        console.log('products', products.length);
         if(products.length > 0){
           this.isAdded = true;
         }
