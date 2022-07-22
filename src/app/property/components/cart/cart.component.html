@@ -38,7 +38,7 @@
         <div class="tax">
           <div class="tax-item">
             <span>Subtotal</span>
-            <span>${{ total - (total * 20/100) }}</span>
+            <span>{{ total - (total * 20/100) | currency }}</span>
           </div>
           <div class="tax-item">
             <span>Total</span>

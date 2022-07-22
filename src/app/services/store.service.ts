@@ -6,6 +6,8 @@ import { BehaviorSubject } from "rxjs";
   providedIn: 'root'
 })
 export class StoreService {
+
+  private showSnackBar = false;
   private products = '';
   private shoppingCart: Product[] = [];
   private myCart = new BehaviorSubject<Product[]>([]);
@@ -18,12 +20,14 @@ export class StoreService {
   addProduct(product: Product){
     this.shoppingCart.push(product)
     this.setStoreProduct(this.shoppingCart);
+    this.showSnackBar = true;
     this.myCart.next(this.shoppingCart);
   }
 
   removeProduct(id: number){
     this.shoppingCart.splice(id, 1);
     this.setStoreProduct(this.shoppingCart);
+    this.showSnackBar = false;
     this.myCart.next(this.shoppingCart);
   }
 
@@ -43,6 +47,10 @@ export class StoreService {
   getStoreProducts(){
     this.products = localStorage.getItem('cart_product') as string;
     return JSON.parse(this.products) ;
+  }
+
+  showSnack(){
+    return this.showSnackBar;
   }
 
 

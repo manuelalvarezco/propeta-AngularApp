@@ -26,7 +26,8 @@ export class CartComponent implements OnInit{
   }
 
   getPrice(){
-    this.total = this.storeService.getTotal();
+    this.storeService.myCart$.subscribe( products => {
+      this.total = products.reduce((sum, item) => sum + item.price, 0);
+    })
   }
-
 }

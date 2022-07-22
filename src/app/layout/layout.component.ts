@@ -12,9 +12,7 @@ export class LayoutComponent implements OnInit{
   ngOnInit(): void {
     this.storeService.myCart$.subscribe(
       products => {
-        if(products.length > 0){
-          this.isAdded = true;
-        }
+        this.showSnackbar();
       }
     )
   }
@@ -22,6 +20,12 @@ export class LayoutComponent implements OnInit{
 
   quitSnackbar(){
     this.isAdded = false;
+  }
+
+  showSnackbar(){
+    this.isAdded = this.storeService.showSnack();
+    console.log('this.isAdded', this.isAdded);
+
   }
 
 }
