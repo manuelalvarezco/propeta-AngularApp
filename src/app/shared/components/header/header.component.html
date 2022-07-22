@@ -6,7 +6,7 @@
     <div class="mobile-menu">
       <div class="mobile-menu cart">
         <span class="productsCount" *ngIf="productsCount > 0">{{productsCount}}</span>
-        <button class="button icon">
+        <button class="button icon" routerLink="/properties/cart">
           <img width="20" src="../.././../../assets/icons/shopping_cart_black.SVG" alt="cart">
         </button>
       </div>
@@ -21,7 +21,7 @@
       <li class="menu_option">
         <div class="desktop-menu cart">
           <span class="productsCount" *ngIf="productsCount > 0">{{productsCount}}</span>
-          <button class="button icon">
+          <button class="button icon" routerLink="/properties/cart">
             <img width="20" src="../.././../../assets/icons/shopping_cart_black.SVG" alt="cart">
           </button>
         </div>

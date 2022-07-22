@@ -1,8 +1,4 @@
 @import '../../.././../sass/variables.scss';
-.container {
-  max-width: 1200px;
-    margin: 0 auto;
-}
 
 .property-detail {
   display: grid;
@@ -89,9 +85,6 @@
 
   .actions  {
     margin-top: 20px;
-    &>{
-      margin: 0 10px;
-    }
   }
 
   .option-shipping {

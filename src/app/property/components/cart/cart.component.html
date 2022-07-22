@@ -1,10 +1,52 @@
 <div class="container">
   <div class="cart-container">
     <div class="cart-container-items">
-
+      <h1 class="cart-title">Cart</h1>
+      <div class="card no-products" *ngIf="products.length === 0">
+        <img class="w-100" src="https://cdn.dribbble.com/userupload/2905354/file/original-92212c04a044acd88c69bedc56b3dda2.png?compress=1&resize=1024x768" alt="">
+      </div>
+      <div class="card-expanded" *ngFor="let product of products">
+        <div class="card-expanded-header">
+            <div class="card-expanded-header-image">
+                <img class="rouded" [src]="product.image" [alt]="product.title" srcset="">
+            </div>
+        </div>
+        <div class="card-expanded-body">
+            <button class="button icon" (click)="quit(product)">
+                <img src="../.././../../assets/icons/delete.svg" alt="delete">
+            </button>
+            <div class="expanded-body-info">
+                <h2 class="card-expanded-body-title">{{ product.title | slice:0:10}}</h2>
+                <p class="card-expanded-body-subtitle">$ {{ product.price }} </p>
+                <span>In Stock</span>
+            </div>
+        </div>
     </div>
-    <div class="cart-container-resume">
-
+    </div>
+    <div *ngIf="products.length !== 0">
+      <div class="cart-container-resume">
+        <h3>Delivery</h3>
+        <div class="input-container_item">
+          <div class="form_input">
+              <input disabled type="text" id="txt_form-input">
+              <label id="form_input-label">Promocode</label>
+              <button id="button_txt" class="button text">APPLY</button>
+            </div>
+            <p>20% off discount</p>
+        </div>
+        <hr>
+        <div class="tax">
+          <div class="tax-item">
+            <span>Subtotal</span>
+            <span>${{ total - (total * 20/100) }}</span>
+          </div>
+          <div class="tax-item">
+            <span>Total</span>
+            <span>${{ total }}</span>
+          </div>
+        </div>
+        <button class="button contained w-100">Proceed to checkout</button>
+      </div>
     </div>
   </div>
 </div>

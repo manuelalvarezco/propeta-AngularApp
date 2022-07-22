@@ -6,16 +6,24 @@ import { BehaviorSubject } from "rxjs";
   providedIn: 'root'
 })
 export class StoreService {
-
+  private products = '';
   private shoppingCart: Product[] = [];
   private myCart = new BehaviorSubject<Product[]>([]);
-
   myCart$ = this.myCart.asObservable();
 
-  constructor() { }
+  constructor() {
+    const count = this.getStoreProducts();
+   }
 
   addProduct(product: Product){
     this.shoppingCart.push(product)
+    this.setStoreProduct(this.shoppingCart);
+    this.myCart.next(this.shoppingCart);
+  }
+
+  removeProduct(id: number){
+    this.shoppingCart.splice(id, 1);
+    this.setStoreProduct(this.shoppingCart);
     this.myCart.next(this.shoppingCart);
   }
 
@@ -26,4 +34,16 @@ export class StoreService {
   getTotal(){
     return this.shoppingCart.reduce((sum, item) => sum + item.price, 0);
   }
+
+
+  setStoreProduct(products: Product[]){
+    localStorage.setItem('cart_product', JSON.stringify(products));
+  }
+
+  getStoreProducts(){
+    this.products = localStorage.getItem('cart_product') as string;
+    return JSON.parse(this.products) ;
+  }
+
+
 }

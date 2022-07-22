@@ -24,7 +24,6 @@ export class HeaderComponent implements OnInit {
   getShoppingCart(){
     this.storeService.myCart$.subscribe( products => {
       this.productsCount = products.length;
-
     })
   }
 
