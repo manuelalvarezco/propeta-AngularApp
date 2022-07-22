@@ -8,6 +8,28 @@ button {
   cursor: pointer;
   font-weight: bold;
 
+  &.button-color{
+    padding: 0;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    box-sizing: border-box;
+    color: white;
+
+    &.pink{
+      background-color: $pink-color;
+    }
+    &.cian{
+      background-color: $cian-color;
+    }
+    &.black{
+      background-color: $black-color;
+    }
+    &.purple{
+      background-color: $purple-color;
+    }
+  }
+
   &.sm {
     min-width: 150px;
   }

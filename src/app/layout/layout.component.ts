@@ -6,6 +6,22 @@ import { StoreService } from '../services/store.service';
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']
 })
-export class LayoutComponent {
+export class LayoutComponent implements OnInit{
+  constructor(private storeService: StoreService){}
+
+  ngOnInit(): void {
+    this.storeService.myCart$.subscribe(
+      products => {
+        if(products.length > 0){
+          this.isAdded = true;
+        }
+      }
+    )
+  }
+  isAdded = false;
+
+  quitSnackbar(){
+    this.isAdded = false;
+  }
 
 }

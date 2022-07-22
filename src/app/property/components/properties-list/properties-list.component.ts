@@ -10,20 +10,13 @@ import { ProductService } from '../../services/product.service';
 })
 export class PropertiesListComponent implements OnInit {
 
-  isAdded = false;
   products: Product[] = [];
 
   constructor(private productService: ProductService, private storeService: StoreService) { }
 
   ngOnInit(): void {
     this.getProducts();
-    this.storeService.myCart$.subscribe(
-      products => {
-        if(products.length > 0){
-          this.isAdded = true;
-        }
-      }
-    )
+    window.scroll(0,0)
   }
 
   getProducts(){
@@ -34,9 +27,7 @@ export class PropertiesListComponent implements OnInit {
     )
   }
 
-  quitSnackbar(){
-    this.isAdded = false;
-  }
+
 
 
 

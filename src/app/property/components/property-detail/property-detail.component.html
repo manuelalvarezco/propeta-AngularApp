@@ -3,22 +3,22 @@
     <div class="property-detail-info">
       <div class="detail-info-header">
       <div class="detail-info-image">
-        <div class="info-email-url">
-          <img src="https://www.propertyok.com/_next/image?url=https%3A%2F%2Fpropok-prod-images.s3.ap-south-1.amazonaws.com%2FresizeImages%2FpropertyImages%2Fproperty-image-500x500%2F15300605233169image&w=1920&q=75" alt="product">
+        <div class="info-email-url" *ngIf="product.image">
+          <img [src]="product.image" [alt]="product.title">
         </div>
         <div class="info-email-carrousel">
           <ul>
             <li>
-              <img src="https://www.propertyok.com/_next/image?url=https%3A%2F%2Fpropok-prod-images.s3.ap-south-1.amazonaws.com%2FresizeImages%2FpropertyImages%2Fproperty-image-500x500%2F15300605233169image&w=1920&q=75" alt="product">
+              <img [src]="product.image" [alt]="product.title">
             </li>
             <li>
-              <img src="https://www.propertyok.com/_next/image?url=https%3A%2F%2Fpropok-prod-images.s3.ap-south-1.amazonaws.com%2FresizeImages%2FpropertyImages%2Fproperty-image-500x500%2F15300605233169image&w=1920&q=75" alt="product">
+              <img [src]="product.image" [alt]="product.title">
             </li>
             <li>
-              <img src="https://www.propertyok.com/_next/image?url=https%3A%2F%2Fpropok-prod-images.s3.ap-south-1.amazonaws.com%2FresizeImages%2FpropertyImages%2Fproperty-image-500x500%2F15300605233169image&w=1920&q=75" alt="product">
+              <img [src]="product.image" [alt]="product.title">
             </li>
             <li>
-              <img src="https://www.propertyok.com/_next/image?url=https%3A%2F%2Fpropok-prod-images.s3.ap-south-1.amazonaws.com%2FresizeImages%2FpropertyImages%2Fproperty-image-500x500%2F15300605233169image&w=1920&q=75" alt="product">
+              <img [src]="product.image" [alt]="product.title">
             </li>
           </ul>
         </div>
@@ -28,13 +28,14 @@
   </div>
   <div class="product-detail">
     <div class="product-detail-name">
-      <h1>Rasdter</h1>
-      <p>Description</p>
+      <h1>{{ product.title }}</h1>
+      <p>{{ product.description}}</p>
     </div>
     <div class="product-detail-size">
       <div class="d-flex align-items-center" >
-        <h2>$80</h2>
-        <span class="ml-2">$100</span>
+        <h2 class="product-detail-price">{{ product.price}}</h2>
+        <small>/</small>
+        <span class="product-detail-discount">{{ product.price + (product.price * 20/100) }}</span>
       </div>
       <div class="size">
         <p>Size</p>
@@ -48,15 +49,15 @@
       <div class="color">
         <p>Color</p>
         <ul class="list-options">
-          <li><button class="button color">Red</button></li>
-          <li><button class="button color">Green</button></li>
-          <li><button class="button color">Blue</button></li>
-          <li><button class="button color">Black</button></li>
+          <li><button class="button-color pink"></button></li>
+          <li><button class="button-color cian"></button></li>
+          <li><button class="button-color black"></button></li>
+          <li><button class="button-color purple"></button></li>
         </ul>
       </div>
       <div class="actions">
-        <button class="button contained">Add to cart</button>
-        <button class="button contained">Whishlist</button>
+        <button class="button contained" (click)="addToCart()">Add to cart</button>
+        <button class="button text ml-2">Whishlist</button>
       </div>
     </div>
   </div>

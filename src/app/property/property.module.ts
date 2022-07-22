@@ -9,6 +9,8 @@ import { PropertyComponent } from './components/property/property.component';
 import { PropertiesListComponent } from './components/properties-list/properties-list.component';
 import { PropertyDetailComponent } from './components/property-detail/property-detail.component';
 import { ProductService } from './services/product.service';
+import { SlugPipe } from './pipes/slug.pipe';
+import { CartComponent } from './components/cart/cart.component';
 
 
 @NgModule({
@@ -17,6 +19,8 @@ import { ProductService } from './services/product.service';
     PropertiesListComponent,
     PropertyComponent,
     PropertyDetailComponent,
+    SlugPipe,
+    CartComponent,
   ],
   imports: [
     CommonModule,
