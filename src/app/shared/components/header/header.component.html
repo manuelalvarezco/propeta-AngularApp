@@ -1,7 +1,7 @@
 <header>
   <div class="brand">
     <a routerLink="/">
-      <img width="200" src="https://www.brandbucket.com/sites/default/files/logo_uploads/396729/large_eclothing.png" alt="propeta">
+      <img width="150" src="https://www.brandbucket.com/sites/default/files/logo_uploads/396729/large_eclothing.png" alt="propeta">
     </a>
     <div class="mobile-menu">
       <div class="mobile-menu cart">
@@ -10,14 +10,23 @@
           <img width="20" src="../.././../../assets/icons/shopping_cart_black.SVG" alt="cart">
         </button>
       </div>
-      <button class="button menu_button" (click)="onClick()">
-        <div class="menu_button-icon"></div>
-      </button>
+      <div class="mobile-menu cart">
+        <button class="button icon">
+          <img width="20" src="../.././../../assets/icons/person.svg" alt="account">
+        </button>
+      </div>
 
     </div>
   </div>
   <div class="menu" [class.d-block]="isOpen">
     <ul class="menu_items">
+      <li class="menu_option">
+        <div class="desktop-menu cart">
+          <button class="button icon" routerLink="/">
+            <img width="20" src="../.././../../assets/icons/home.svg" alt="home">
+          </button>
+        </div>
+      </li>
       <li class="menu_option">
         <div class="desktop-menu cart">
           <span class="productsCount" *ngIf="productsCount > 0">{{productsCount}}</span>
@@ -27,14 +36,13 @@
         </div>
       </li>
       <li class="menu_option">
-        <a href="#">HOME</a>
+        <div class="desktop-menu cart">
+          <button class="button icon">
+            <img width="20" src="../.././../../assets/icons/person.svg" alt="account">
+          </button>
+        </div>
       </li>
-      <li class="menu_option">
-        <a href="#">BLOG</a>
-      </li>
-      <li class="menu_option">
-        <a href="#">CONTACT</a>
-      </li>
+      <!-- More Options menu Web -->
     </ul>
   </div>
 </header>

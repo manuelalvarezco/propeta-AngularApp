@@ -5,6 +5,7 @@
   grid-template-columns: repeat(2, 1fr);
   margin-bottom: 50px;
   gap: 20px;
+  margin: 30px;
 }
 
 .info-email-url {
@@ -19,10 +20,7 @@
 
 .detail-info-image {
   display: flex;
-}
-
-.info-email-carrousel{
-
+  justify-content: center;
 }
 
 .info-email-carrousel ul li{
@@ -67,6 +65,11 @@
     &>p {
       margin-bottom: 0;
     }
+  }
+
+  .price {
+    display: flex;
+    align-items: center;
   }
 
   .list-options {
@@ -117,6 +120,10 @@
     }
     .property-detail{
       display: block;
+      margin: 0;
+    }
+    .property-detail-info{
+      margin: 20px 0;
     }
     .detail-info-image {
       flex-direction: column;
@@ -139,12 +146,19 @@
 
     .product-detail-size {
       display: flex;
-    flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+    .color {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
     }
 
     .size {
-      margin-left: auto;
-      text-align: center;
+      margin: 10px 0;
+      display: flex;
+      align-items: flex-start;
     }
 
     .actions{

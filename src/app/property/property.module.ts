@@ -11,6 +11,7 @@ import { PropertyDetailComponent } from './components/property-detail/property-d
 import { ProductService } from './services/product.service';
 import { SlugPipe } from './pipes/slug.pipe';
 import { CartComponent } from './components/cart/cart.component';
+import { InputFillDirective } from './directives/input-fill.directive';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { CartComponent } from './components/cart/cart.component';
     PropertyDetailComponent,
     SlugPipe,
     CartComponent,
+    InputFillDirective,
   ],
   imports: [
     CommonModule,

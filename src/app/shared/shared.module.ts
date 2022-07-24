@@ -6,6 +6,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SnackbarComponent } from './components/snackbar/snackbar.component';
 import { HeroComponent } from './components/hero/hero.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SelectResultDirective } from './directives/select-result.directive';
 
 
 @NgModule({
@@ -13,11 +15,14 @@ import { HeroComponent } from './components/hero/hero.component';
     HeaderComponent,
     FooterComponent,
     SnackbarComponent,
-    HeroComponent
+    HeroComponent,
+    SelectResultDirective
   ],
   imports: [
     CommonModule,
-    SharedRoutingModule
+    SharedRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     HeaderComponent,

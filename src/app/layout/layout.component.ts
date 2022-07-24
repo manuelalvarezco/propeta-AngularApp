@@ -24,8 +24,6 @@ export class LayoutComponent implements OnInit{
 
   showSnackbar(){
     this.isAdded = this.storeService.showSnack();
-    console.log('this.isAdded', this.isAdded);
-
   }
 
 }

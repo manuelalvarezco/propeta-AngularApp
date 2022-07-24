@@ -1,11 +1,11 @@
-@import '../../../../sass/variables';
+@import '/src/sass/variables.scss';
 
 header{
-  height: 70px;
   padding: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: $gray-color;
 }
 .mobile-menu {
   display: none;
@@ -47,7 +47,7 @@ header{
   align-items: center;
 }
 .menu_option {
-  margin: 0 10px;
+  margin-right:10px;
   list-style: none;
   &>a{
     text-decoration: none;
@@ -56,10 +56,6 @@ header{
       color: $primary-color;
     }
   }
-}
-
-.d-block {
-  display: block!important;
 }
 
 
@@ -92,6 +88,7 @@ header{
   }
   .mobile-menu {
     display: flex;
+    align-items: center;
     position: relative;
   }
   .menu_button{

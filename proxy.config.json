@@ -1,0 +1,8 @@
+{
+  "/api/*": {
+    "target": "https://www.propertyok.com",
+    "secret": true,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

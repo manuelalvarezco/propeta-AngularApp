@@ -2,12 +2,19 @@
   <div class="overlay"></div>
   <h1>Find Your <span class="orange-color">Perfect clothes</span></h1>
   <div class="form-group-inline">
-    <input type="text" placeholder="Search Location">
+    <div class="product-elements">
+      <input type="text" placeholder="Search" [formControl]="product" list="products" name="product" id="product">
+       <datalist id="products"  class="products-result" *ngIf="products.length > 0">
+        <option *ngFor="let product of products" [value]="product.title | slice:0:10"></option>
+      </datalist>
+    </div>
     <select name="" id="">
-      <option value="">Type</option>
+      <option value="">Select</option>
+      <option *ngFor="let product of selectedProducts" [value]="product.title">{{ product.title | slice:0:10 }}</option>
     </select>
     <select name="" id="">
-      <option value="">Type</option>
+      <option value="">Select</option>
+      <option *ngFor="let product of selectedProducts" [value]="product.title">{{ product.title | slice:0:10 }}</option>
     </select>
     <button type="button" class="button sm contained" >Search</button>
   </div>

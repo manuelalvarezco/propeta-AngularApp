@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
     this.getShoppingCart();
   }
 
-  onClick(){
+  openMenu(){
     this.isOpen = !this.isOpen;
   }
 

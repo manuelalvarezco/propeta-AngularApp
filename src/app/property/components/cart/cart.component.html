@@ -1,10 +1,7 @@
-<div class="container">
-  <div class="cart-container">
+<div class="container content-card">
+  <div class="cart-container" *ngIf="products.length > 0">
     <div class="cart-container-items">
       <h1 class="cart-title">Cart</h1>
-      <div class="card no-products" *ngIf="products.length === 0">
-        <img class="w-100" src="https://cdn.dribbble.com/userupload/2905354/file/original-92212c04a044acd88c69bedc56b3dda2.png?compress=1&resize=1024x768" alt="">
-      </div>
       <div class="card-expanded" *ngFor="let product of products">
         <div class="card-expanded-header">
             <div class="card-expanded-header-image">
@@ -28,8 +25,7 @@
         <h3>Delivery</h3>
         <div class="input-container_item">
           <div class="form_input">
-              <input disabled type="text" id="txt_form-input">
-              <label id="form_input-label">Promocode</label>
+              <input appInputFill  placeholder="Directive - Promocode" type="text" id="txt_form-input">
               <button id="button_txt" class="button text">APPLY</button>
             </div>
             <p>20% off discount</p>
@@ -42,11 +38,14 @@
           </div>
           <div class="tax-item">
             <span>Total</span>
-            <span>${{ total }}</span>
+            <span>{{ total | currency }}</span>
           </div>
         </div>
         <button class="button contained w-100">Proceed to checkout</button>
       </div>
     </div>
+  </div>
+  <div class="card no-products" *ngIf="products.length === 0">
+    <img class="w-100" src="https://cdn.dribbble.com/userupload/2905354/file/original-92212c04a044acd88c69bedc56b3dda2.png?compress=1&resize=1024x768" alt="">
   </div>
 </div>

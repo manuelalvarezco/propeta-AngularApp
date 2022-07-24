@@ -15,8 +15,8 @@ export class PropertiesListComponent implements OnInit {
   constructor(private productService: ProductService, private storeService: StoreService) { }
 
   ngOnInit(): void {
-    this.getProducts();
     window.scroll(0,0)
+    this.getProducts();
   }
 
   getProducts(){

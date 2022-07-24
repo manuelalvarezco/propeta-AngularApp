@@ -6,22 +6,6 @@
         <div class="info-email-url" *ngIf="product.image">
           <img [src]="product.image" [alt]="product.title">
         </div>
-        <div class="info-email-carrousel">
-          <ul>
-            <li>
-              <img [src]="product.image" [alt]="product.title">
-            </li>
-            <li>
-              <img [src]="product.image" [alt]="product.title">
-            </li>
-            <li>
-              <img [src]="product.image" [alt]="product.title">
-            </li>
-            <li>
-              <img [src]="product.image" [alt]="product.title">
-            </li>
-          </ul>
-        </div>
       </div>
     </div>
 
@@ -32,7 +16,7 @@
       <p>{{ product.description}}</p>
     </div>
     <div class="product-detail-size">
-      <div class="d-flex align-items-center" >
+      <div class="price" >
         <h2 class="product-detail-price">{{ product.price}}</h2>
         <small>/</small>
         <span class="product-detail-discount">{{ product.price + (product.price * 20/100) }}</span>
