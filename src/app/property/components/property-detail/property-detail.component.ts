@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../../shared/models/product.model';
 import { ActivatedRoute } from '@angular/router';
-import { StoreService } from '../../../services/store.service';
+import { StoreService } from '../../services/store.service';
 
 @Component({
   selector: 'app-property-detail',

@@ -13,7 +13,15 @@ const routes: Routes = [
         path: 'properties',
         loadChildren: () => import('./property/property.module').then(m => m.PropertyModule)
       },
+      {
+        path: 'auth',
+        loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+      }
     ]
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
   },
 ];
 

@@ -82,7 +82,7 @@
 
 @media screen and (max-width: 1024px) {
   .form-group-inline {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     width: 80%;
   }
 
@@ -91,5 +91,14 @@
       align-self: flex-start;
       margin: 90px 20px 0 20px;
     }
+  }
+}
+
+@media screen and (max-width: 674px) {
+  .form-group-inline {
+    &>button {
+      margin: 0;
+    }
+
   }
 }

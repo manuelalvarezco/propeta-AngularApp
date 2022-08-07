@@ -6,15 +6,5 @@ select{
   font-size: 16px;
   background-color: $white-color;
   border: 1px solid $dark-gray-color;
-  margin: 0 10px;
   color: $dymgray-color;
-}
-
-
-
-
-@media screen and (max-width: 1024px) {
-  select {
-    margin: 10px 0;
-  }
 }
